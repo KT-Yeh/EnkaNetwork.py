@@ -1682,5 +1682,125 @@
             855,
             856
         ]
+    },
+    "10000086": {
+        "nameTextMapHash": 370151050,
+        "iconName": "UI_AvatarIcon_Wriothesley",
+        "sideIconName": "UI_AvatarIcon_Side_Wriothesley",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Ice",
+        "skills": [
+            10861,
+            10862,
+            10865
+        ],
+        "talents": [
+            861,
+            862,
+            863,
+            864,
+            865,
+            866
+        ]
+    },
+    "10000087": {
+        "nameTextMapHash": 1504902330,
+        "iconName": "UI_AvatarIcon_Neuvillette",
+        "sideIconName": "UI_AvatarIcon_Side_Neuvillette",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Water",
+        "skills": [
+            10871,
+            10872,
+            10875
+        ],
+        "talents": [
+            871,
+            872,
+            873,
+            874,
+            875,
+            876
+        ]
+    },
+    "10000088": {
+        "nameTextMapHash": 3831162130,
+        "iconName": "UI_AvatarIcon_Charlotte",
+        "sideIconName": "UI_AvatarIcon_Side_Charlotte",
+        "qualityType": "QUALITY_PURPLE",
+        "costElemType": "Ice",
+        "skills": [
+            10881,
+            10882,
+            10885
+        ],
+        "talents": [
+            881,
+            882,
+            883,
+            884,
+            885,
+            886
+        ]
+    },
+    "10000089": {
+        "nameTextMapHash": 2180900234,
+        "iconName": "UI_AvatarIcon_Furina",
+        "sideIconName": "UI_AvatarIcon_Side_Furina",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Water",
+        "skills": [
+            10891,
+            10892,
+            10895
+        ],
+        "talents": [
+            891,
+            892,
+            893,
+            894,
+            895,
+            896
+        ]
+    },
+    "10000090": {
+        "nameTextMapHash": 540313842,
+        "iconName": "UI_AvatarIcon_Chevreuse",
+        "sideIconName": "UI_AvatarIcon_Side_Chevreuse",
+        "qualityType": "QUALITY_PURPLE",
+        "costElemType": "Fire",
+        "skills": [
+            10901,
+            10902,
+            10905
+        ],
+        "talents": [
+            901,
+            902,
+            903,
+            904,
+            905,
+            906
+        ]
+    },
+    "10000091": {
+        "nameTextMapHash": 2877588578,
+        "iconName": "UI_AvatarIcon_Navia",
+        "sideIconName": "UI_AvatarIcon_Side_Navia",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Rock",
+        "skills": [
+            10911,
+            10912,
+            10915
+        ],
+        "talents": [
+            911,
+            912,
+            913,
+            914,
+            915,
+            916
+        ]
     }
 }
