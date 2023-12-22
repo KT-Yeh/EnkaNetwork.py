@@ -3,7 +3,7 @@ enkanetwork.egg-info
 ./build
 enkanetwork.py.egg-info
 dist
-test/*.test.py
+test
 .pytest_cache
 .idea
 git-story_media
@@ -11,3 +11,4 @@ env
 export.json
 843715177.json
 build
+.venv
