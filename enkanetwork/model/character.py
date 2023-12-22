@@ -1,6 +1,6 @@
 import logging
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Any, Dict
 
 from .equipments import Equipments
@@ -65,6 +65,10 @@ class CharacterInfo(BaseModel):
     # Other
     max_level: int = 20
     constellations_unlocked: int = 0  # Constellation is unlocked count
+
+    @field_validator("id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
     def __init__(self, **data: Any) -> None:
         super().__init__(**data)

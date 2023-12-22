@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from .players import PlayerInfo
 from .build import Builds
@@ -14,4 +14,6 @@ class PlayerHoyos(BaseModel):
 
     builds: Builds = None
 
-    
+    @field_validator("order",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)

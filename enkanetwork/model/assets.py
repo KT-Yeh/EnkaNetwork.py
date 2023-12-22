@@ -1,5 +1,5 @@
-from pydantic import BaseModel, Field
-from typing import List, Any
+from pydantic import BaseModel, Field, field_validator
+from typing import List, Any, Union
 
 from ..enum import ElementType
 from .utils import IconAsset
@@ -36,6 +36,10 @@ class NamecardAsset(BaseModel):
     icon: IconAsset
     banner: IconAsset
     navbar: IconAsset
+
+    @field_validator("hash_id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
 
 class CharacterIconAsset(BaseModel):
@@ -77,6 +81,10 @@ class CharacterSkillAsset(BaseModel):
     hash_id: str = Field("", alias="nameTextMapHash")
     icon: IconAsset = None
 
+    @field_validator("hash_id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
+
 
 class CharacterConstellationsAsset(BaseModel):
     """ Character Constellations (Assets)
@@ -93,6 +101,10 @@ class CharacterConstellationsAsset(BaseModel):
     id: int = 0
     hash_id: str = Field("", alias="nameTextMapHash")
     icon: IconAsset = None
+
+    @field_validator("hash_id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
 
 class CharacterCostume(BaseModel):
@@ -114,7 +126,8 @@ class AritfactProps(BaseModel):
     id: int = 0
     type: str = Field('', alias='propType')
     digit: str = Field('DIGIT', alias='propDigit')
-    value: int = Field(0, alias='propValue')
+    value: Union[int,float] = Field(0.0, alias='propValue')
+
 
 
 class CharacterAsset(BaseModel):
@@ -147,6 +160,10 @@ class CharacterAsset(BaseModel):
     skill_id: int = 0
     skills: List[int] = []
     constellations: List[int] = Field([], alias="talents")
+
+    @field_validator("hash_id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
     class Config:
         use_enum_values = True

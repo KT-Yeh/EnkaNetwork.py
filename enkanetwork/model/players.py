@@ -1,6 +1,6 @@
 import logging
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Any, Union
 
 from .utils import IconAsset
@@ -27,6 +27,10 @@ class ProfilePicture(BaseModel):
         Custom add data
     """
     icon: IconAsset = None
+
+    @field_validator("id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
     def __init__(self, **data: Any) -> None:
         super().__init__(**data)
@@ -59,6 +63,10 @@ class showAvatar(BaseModel):
     name: str = ""
     icon: IconAsset = None
     element: ElementType = ElementType.Unknown
+
+    @field_validator("id",mode="before")
+    def id_to_str(cls, value) -> str:
+        return str(value)
 
     def __init__(self, **data: Any) -> None:
         super().__init__(**data)
